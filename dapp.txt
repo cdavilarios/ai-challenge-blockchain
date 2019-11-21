@@ -1,0 +1,15 @@
+sudo apt-get install curl
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo npm install -g truffle@4.1.13
+sudo npm install -g ganache-cli
+
+git clone https://github.com/esc000658/rocket.git
+ganache-cli
+
+# go to metamask, select the proper network and import 3 private keys
+# go to the file of the project and deploy it in ganache
+
+truffle compile
+truffle migrate --network local --reset
+npm run dev
